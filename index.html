@@ -11,8 +11,26 @@
   
   <meta name="description" content="_00_Skeleton ++Mozzi example 1
 2
-var arr1 = new Array(arrayLength);
-var arr2 = new Array(element0, element1, ..., elementN); include MozziGuts.h &hellip;">
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+#include MozziGuts.h; // at the top of your sketch
+#define &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,34 +116,50 @@ var arr2 = new Array(element0, element1, ..., elementN); include MozziGuts.h &he
 
   <div class="entry-content">
 
-<figure class='code'><figcaption><span>_00_Skeleton ++</span><a href='https://github.com/sensorium/Mozzi/blob/master/examples/_00_Skeleton/_00_Skeleton.ino'>Mozzi example </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>_00_Skeleton ++</span><a href='https://github.com/sensorium/Mozzi/blob/master/examples/_00_Skeleton/_00_Skeleton.ino?raw=true'>Mozzi example </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">var</span> <span class="n">arr1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Array</span><span class="p">(</span><span class="n">arrayLength</span><span class="p">);</span>
-</span><span class='line'><span class="n">var</span> <span class="n">arr2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Array</span><span class="p">(</span><span class="n">element0</span><span class="p">,</span> <span class="n">element1</span><span class="p">,</span> <span class="p">...,</span> <span class="n">elementN</span><span class="p">);</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include MozziGuts.h;           </span><span class="c1">// at the top of your sketch</span>
+</span><span class='line'><span class="cp">#define CONTROL_RATE 64   </span><span class="c1">// or some other power of 2</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">startMozzi</span><span class="p">(</span><span class="n">CONTROL_RATE</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">updateControl</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// your control code</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">updateAudio</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// your audio code which returns an int between -244 and 243</span>
+</span><span class='line'>  <span class="c1">// actually, a char is fine</span>
+</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">audioHook</span><span class="p">();</span> <span class="c1">// fills the audio buffer</span>
+</span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h1>include MozziGuts.h;           // at the top of your sketch</h1>
 
-<h1>define CONTROL_RATE 64   // or some other power of 2</h1>
-
-<p>void setup() {
-  startMozzi(CONTROL_RATE);
-}</p>
-
-<p>void updateControl() {
-  // your control code
-}</p>
-
-<p>int updateAudio() {
-  // your audio code which returns an int between -244 and 243
-  // actually, a char is fine
-  return 0;
-}</p>
-
-<p>void loop() {
-  audioHook(); // fills the audio buffer
-}</p>
 </div>
   
   
