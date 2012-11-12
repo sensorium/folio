@@ -9,9 +9,9 @@
   <meta name="author" content="Tim Barrass">
 
   
-  <meta name="description" content=" Blog Archive 2012 unbelievable
+  <meta name="description" content="Blog Archive 2012 unbelievable
 Nov 12 2012 hello
-Nov 12 2012 Recent Posts unbelievable hello ">
+Nov 12 2012 Recent Posts unbelievable hello GitHub Repos Status updating... @sensorium on GitHub $. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,51 @@ Nov 12 2012 Recent Posts unbelievable hello ">
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/sensorium">@sensorium</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'sensorium',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/folio/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("nothingperson", 4, false);
+    });
+  </script>
+  <script src="/folio/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/nothingperson" class="twitter-follow-button" data-show-count="false">Follow @nothingperson</a>
+  
+</section>
 
 
 
