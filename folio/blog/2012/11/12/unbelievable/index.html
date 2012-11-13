@@ -9,7 +9,7 @@
   <meta name="author" content="Tim Barrass">
 
   
-  <meta name="description" content="_00_Skeleton ++Mozzi example 1
+  <meta name="description" content="here&#8217;s a code block _00_Skeleton ++Mozzi example 1
 2
 3
 4
@@ -29,8 +29,7 @@
 18
 19
 20
-#include MozziGuts.h; // at the top of your sketch
-#define &hellip;">
+#include MozziGuts.h; // at the top of your &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -111,7 +110,7 @@
   </header>
 
 
-<div class="entry-content">
+<div class="entry-content"><h2>here&#8217;s a code block</h2>
 
 <figure class='code'><figcaption><span>_00_Skeleton ++</span><a href='https://github.com/sensorium/Mozzi/blob/master/examples/_00_Skeleton/_00_Skeleton.ino?raw=true'>Mozzi example </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -156,7 +155,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<h2>this one&#8217;s better</h2>
 
 <figure class='code'><figcaption><span>_00_Skeleton ++</span><a href='https://github.com/sensorium/Mozzi/blob/master/examples/_00_Skeleton/_00_Skeleton.ino?raw=true'>Mozzi example </a></figcaption> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -197,6 +196,100 @@
 </span><span class='line'>
 </span><span class='line'><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">audioHook</span><span class="p">();</span> <span class="c1">// fills the audio buffer</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>this should be best?</h2>
+
+<figure class='code'><figcaption><span> (_01_Sinewave.ino)</span> <a href='/folio/downloads/code/examples/_01_Sinewave/_01_Sinewave.ino'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cm">/*  Example playing a sinewave at a set frequency,</span>
+</span><span class='line'><span class="cm"> *  using Mozzi sonification library.</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> *  Demonstrates the use of Oscil to play a wavetable.</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> *  Circuit: Audio output on digital pin 9.</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> *  Mozzi help/discussion/announcements:</span>
+</span><span class='line'><span class="cm"> *  https://groups.google.com/forum/#!forum/mozzi-users</span>
+</span><span class='line'><span class="cm"> *</span>
+</span><span class='line'><span class="cm"> *  Tim Barrass 2012.</span>
+</span><span class='line'><span class="cm"> *  This example code is in the public domain.</span>
+</span><span class='line'><span class="cm"> */</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#include &lt;MozziGuts.h&gt;</span>
+</span><span class='line'><span class="cp">#include &lt;Oscil.h&gt; </span><span class="c1">// oscillator template</span>
+</span><span class='line'><span class="cp">#include &lt;tables/sin2048_int8.h&gt; </span><span class="c1">// sine table for oscillator</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// use: Oscil &lt;table_size, update_rate&gt; oscilName (wavetable)</span>
+</span><span class='line'><span class="n">Oscil</span> <span class="o">&lt;</span><span class="n">SIN2048_NUM_CELLS</span><span class="p">,</span> <span class="n">AUDIO_RATE</span><span class="o">&gt;</span> <span class="n">aSin</span><span class="p">(</span><span class="n">SIN2048_DATA</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// use #define for CONTROL_RATE, not a constant</span>
+</span><span class='line'><span class="cp">#define CONTROL_RATE 64 </span><span class="c1">// powers of 2 please</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="n">setup</span><span class="p">(){</span>
+</span><span class='line'>  <span class="n">startMozzi</span><span class="p">(</span><span class="n">CONTROL_RATE</span><span class="p">);</span> <span class="c1">// set a control rate of 64 (powers of 2 please)</span>
+</span><span class='line'>  <span class="n">aSin</span><span class="p">.</span><span class="n">setFreq</span><span class="p">(</span><span class="mi">440u</span><span class="p">);</span> <span class="c1">// set the frequency with an unsigned int or a float</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="n">updateControl</span><span class="p">(){</span>
+</span><span class='line'>  <span class="c1">// put changing controls in here</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="n">updateAudio</span><span class="p">(){</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">aSin</span><span class="p">.</span><span class="n">next</span><span class="p">();</span> <span class="c1">// return an int signal centred around 0</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="n">loop</span><span class="p">(){</span>
+</span><span class='line'>  <span class="n">audioHook</span><span class="p">();</span> <span class="c1">// required here</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
