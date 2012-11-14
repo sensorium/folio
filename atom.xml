@@ -4,7 +4,7 @@
   <title><![CDATA[Folio (test)]]></title>
   <link href="http://sensorium.github.com/folio/atom.xml" rel="self"/>
   <link href="http://sensorium.github.com/folio/"/>
-  <updated>2012-11-15T00:56:22+11:00</updated>
+  <updated>2012-11-15T01:04:39+11:00</updated>
   <id>http://sensorium.github.com/folio/</id>
   <author>
     <name><![CDATA[Tim Barrass]]></name>
@@ -4736,7 +4736,18 @@
 
 
 
-<script type="text/javascript"> $(document).ready(function() { // Hide the "view" div. $('div.view').hide(); // Watch for clicks on the "slide" link. $('div.slide').click(function() { // When clicked, toggle the "view" div. $('div.view').slideToggle(400); return false; }); }); </script>
+<script type="text/javascript"> 
+$(document).ready(function() { 
+// Hide the "view" div. 
+$('div.view').hide(); 
+// Watch for clicks on the "slide" link. 
+$('div.slide').click(function() { 
+// When clicked, toggle the "view" div. 
+$('div.view').slideToggle(400); 
+return false; 
+}); 
+}); 
+</script>
 
 
 
