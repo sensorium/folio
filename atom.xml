@@ -4,7 +4,7 @@
   <title><![CDATA[Folio (test)]]></title>
   <link href="http://sensorium.github.com/folio/atom.xml" rel="self"/>
   <link href="http://sensorium.github.com/folio/"/>
-  <updated>2012-11-15T01:04:39+11:00</updated>
+  <updated>2012-11-15T01:07:43+11:00</updated>
   <id>http://sensorium.github.com/folio/</id>
   <author>
     <name><![CDATA[Tim Barrass]]></name>
@@ -70,7 +70,9 @@
 
 <p></p>
 
-<div class="view"> This will get shown/hidden depending on the toggle above.
+<div class="view"> This will get shown/hidden depending on the toggle above.</div>
+
+
 <figure class='code'><figcaption><span> (m_00_Skeleton.ino)</span> <a href='http://sensorium.github.com/folio/downloads/code/examples/m_00_Skeleton/m_00_Skeleton.ino'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -113,7 +115,8 @@
 </span><span class='line'>  <span class="n">audioHook</span><span class="p">();</span> <span class="c1">// fills the audio buffer</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
-</div>
+
+
 
 
 <figure class='code'><figcaption><span> (m_01_Sinewave.ino)</span> <a href='http://sensorium.github.com/folio/downloads/code/examples/m_01_Sinewave/m_01_Sinewave.ino'>download</a></figcaption>
